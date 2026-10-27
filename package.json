@@ -1,0 +1,24 @@
+{
+  "name": "client-proofing-system",
+  "version": "4.0.0",
+  "private": true,
+  "description": "Client proofing system: React client in client/, Node API in server/ (also deployed as Vercel functions from api/)",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node --watch server/src/index.js",
+    "dev:client": "npm --prefix client run dev",
+    "start": "node server/src/index.js",
+    "seed": "node server/src/seed.js",
+    "build": "npm --prefix client run build",
+    "lint": "npm --prefix server run lint && npm --prefix client run lint"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.11.0",
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.4"
+  }
+}
